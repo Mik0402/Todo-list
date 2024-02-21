@@ -1,7 +1,7 @@
 import React from "react"
 
-export default function editTodoForm() {
+export default function EditTodoForm() {
     return (
-        <div>editTodoForm</div>
+        <div>EditTodoForm</div>
     )
 }
