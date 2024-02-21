@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function todoWrapper {
+export default function todoWrapper() {
     return (
-        <div>
+        <div className="todoWrapper">
             <todoForm />
         </div>
     )
