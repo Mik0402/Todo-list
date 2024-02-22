@@ -17,13 +17,17 @@ function addTodo(todo) {
   function toggleComplete(id) {
     setTodos(todos.map(todo => todo.id === id ? {... todo, completed: !todo.completed} : todo))
   }
+
+  function deleteTodo(id) {
+    setTodos(todos.filter(todo => todo.id !== id))
+  }
     return (
         <div className="todoWrapper">
             <h1>Get Things</h1>
             <TodoForm addTodo={addTodo} />
             {todos.map((todo, index) => (
                 <Todo task={todo} key={index}
-                toggleComplete={toggleComplete} />
+                toggleComplete={toggleComplete} deleteTodo={deleteTodo} />
             ))}
         </div>
     )
