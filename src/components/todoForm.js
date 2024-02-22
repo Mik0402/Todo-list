@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 
 export default function TodoForm({addTodo}) {
-    const [value, setValue] = useState("")
-    
+    const [value, setValue] = useState('')
+
     function handleChange(event) {
-        setValue(event.target.value);
+        setValue(event.target.value)
     }
 
     function handleSubmit(event) {
@@ -12,8 +12,8 @@ export default function TodoForm({addTodo}) {
         if (value) {
             addTodo(value);
             setValue('');
+        }
     }
-}
 
     return (
         <form className="todoForm" onSubmit={handleSubmit}>
