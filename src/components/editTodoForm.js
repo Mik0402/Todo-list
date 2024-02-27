@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-export default function EditTodoForm({editTodo, task}) {
+export default function EditTodoForm(editTodo, task) {
     const [value, setValue] = useState(task.task)
 
     function handleChange(event) {
