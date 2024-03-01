@@ -5,7 +5,7 @@ import Todo from './Todo';
 import EditTodoForm from './EditTodoForm';
 
 export default function TodoWrapper() {
-    const [todos, setTodos] = useState([]);
+    let [todos, setTodos] = useState([]);
 
 function addTodo(todo) {
     setTodos([
@@ -37,7 +37,7 @@ function addTodo(todo) {
             <TodoForm addTodo={addTodo} />
             {todos.map((todo) => 
                 todo.isEditing ? (
-                    <EditTodoForm editTodo={editTask} task={todo} />
+                    <EditTodoForm editTodo={editTask} task={todo} key={todo.id} />
                 ) : (
                     <Todo task={todo} key={todo.id}
                 toggleComplete={toggleComplete} deleteTodo={deleteTodo} editTodo={editTodo} />

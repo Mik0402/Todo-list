@@ -17,7 +17,7 @@ export default function TodoForm({addTodo}) {
 
     return (
         <form className="todoForm" onSubmit={handleSubmit}>
-            <input type="text" className="todo-input" placeholder="What is the task today?" onChange={handleChange} />
+            <input type="text" id="addTodo" className="todo-input" placeholder="What is the task today?" onChange={handleChange} />
             <button type="submit" className="todo-btn">Add Task</button>
         </form>
     )
